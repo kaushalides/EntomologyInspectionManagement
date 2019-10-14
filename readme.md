@@ -8,18 +8,19 @@
 </p>
 
 <h2>## About the Project</h2>
-Started date : 08.10.2019
+Started date : 08.10.2019<br>
 End date : 14.10.2019
 <p>
 This project has developed to the entomology division in NPQS to keep track their inspections. 
+<br>
 Functional requirements:
 <ul>
 <li>Add Companies</li>
-Company details should be added to the system. Company name, email, phone,address, fax and register number should be added to the system.
+Company details should be added to the system. Company name, email, phone,address, fax and register number are the fields for input.
 <li>Add Employees</li>
-Employee details should be added to the system. Employee name, email, phone and designation should be added to the system.
+Employee details should be added to the system. Employee name, email, phone and designation sare the fields for input.
 <li>Add new inspection</li>
-Inspection details should be added to the system. Company Id,Employee Id, inspection date, export date,commodity and remark should be added to the system. Companyies and Employees dropdowns added dynamically to the interface. When user select the company, its showing last visited employee for this company with dates.
+Inspection details should be added to the system. Company Id,Employee Id, inspection date, export date,commodity and remark are the fields for input. Companyies and Employees dropdowns added dynamically to the interface. When user select the company, its showing last visited employee for this company with dates.
 <li>View inspections</li>
 Inspections are showing in a table with search facility of inspection by employee and company
 </ul>
