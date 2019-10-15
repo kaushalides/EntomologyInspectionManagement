@@ -15,7 +15,7 @@
 
 <h2>L. C. Hewage</h2>
 
-<h4>Principal Scientist / Head Entomology Division</h4>
+<h4>Principal Scientist Agri.(Plant Quarantine) / Head Entomology Division</h4>
 
 <h5>Entomology & Nemotology Division</h5>
 
