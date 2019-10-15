@@ -6,7 +6,7 @@
     <div class="text-center">
     <h1 class="text-uppercase" style="color:black;">Add Employee</h1></div>
 
-    <form class="form-horizontal" enctype="multipart/form-data" method="post" action="/addNewEmployee">
+    <form class="form-horizontal" enctype="multipart/form-data" method="post" action= "{{url('/addNewEmployee')}}">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <div class="form-group">

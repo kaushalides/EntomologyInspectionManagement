@@ -6,7 +6,7 @@
     <div class="text-center">
     <h1 class="text-uppercase" style="color:black;">Add Company</h1></div>
 
-    <form class="form-horizontal" method="post" action="/addNewCompany">
+    <form class="form-horizontal" method="post" action="{{url('/addNewCompany')}}">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <div class="form-group">

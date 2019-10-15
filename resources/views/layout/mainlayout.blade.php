@@ -26,12 +26,12 @@
       <li class="{{{ Route::currentRouteName() == 'home' ? 'active' : '' }}}"><a href="{{url('/home')}}">Home</a></li>
       <li class="dropdown "><a class="dropdown-toggle" data-toggle="dropdown" href="#">Inspection <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li ><a href="/add_inspection">Add Inspection</a></li>
-          <li><a href="/view_inspection">View Inspection</a></li>
+          <li ><a href="{{url('/add_inspection')}}">Add Inspection</a></li>
+          <li><a href="{{url('/view_inspection')}}">View Inspection</a></li>
         </ul>
       </li>
-      <li class="{{{ Route::currentRouteName() == 'add_employee' ? 'active' : '' }}}"><a href="/add_employee">Add Employee</a></li>
-      <li class="{{{ Route::currentRouteName() == 'add_company' ? 'active' : '' }}}"><a href="/add_company">Add Company</a></li>
+      <li class="{{{ Route::currentRouteName() == 'add_employee' ? 'active' : '' }}}"><a href="{{url('/add_employee')}}" >Add Employee</a></li>
+      <li class="{{{ Route::currentRouteName() == 'add_company' ? 'active' : '' }}}"><a href="{{url('/add_company')}}" >Add Company</a></li>
     </ul>
   </div>
 </nav>
