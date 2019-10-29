@@ -50,9 +50,14 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show()
+    { 
+            $companies = DB::table('company')
+            ->orderBy('company_name', 'asc')
+            ->get();
+            return view('view_company',compact(['companies', 'companies'])
+     );
+        
     }
 
     /**
@@ -61,9 +66,18 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $req)
     {
-        //
+        DB::table('company')
+        ->where('company_id', $req->company_id)
+        ->update(['company_name' => $req->com_name,
+        'company_address' => $req->com_address,
+        'company_fax' => $req->com_fax,
+        'company_reg_no' => $req->com_reg,
+        'company_email' => $req->com_email,
+        'company_contact' => $req->com_nmbr]);
+        return redirect()->back();
+
     }
 
     /**

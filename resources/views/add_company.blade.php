@@ -41,7 +41,7 @@
   <div class="form-group">
     <label class="control-label col-sm-2" style="text-align: left" for="reg">Company Registration Number</label>
     <div class="col-sm-10">
-    <input type="number" required class="form-control col-sm-8" id="company_reg_no" name="company_reg_no" placeholder="company registration number">
+    <input type="text" required class="form-control col-sm-8" id="company_reg_no" name="company_reg_no" placeholder="company registration number">
 </div>
   </div>
   <div class="col-sm-6"></div>

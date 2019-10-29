@@ -101,8 +101,8 @@ class InspectionController extends Controller
         //
     }
     public function returnView(){
-        $emp = Employee::select('emp_id','emp_name')->get()->toArray();
-        $company = DB::select("select * from company");
+        $emp = Employee::select('emp_id','emp_name')->orderBy('emp_id','ASC')->get()->toArray();
+        $company = DB::select("select * from company ORDER BY company_id ASC");
         //dd($company);
        // $sections= Sections::all()->toArray();
        //$company = json_encode($result);

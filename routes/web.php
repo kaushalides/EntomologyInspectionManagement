@@ -17,7 +17,7 @@ Route::get('/home', function () {
 
 Route::get('/add_inspection', 'InspectionController@returnView');
 
-Route::get('/view_inspection','InspectionController@show')->name('view_inspection');;
+Route::get('/view_inspection','InspectionController@show')->name('view_inspection');
 Route::get('/add_company', function () {
     return view('add_company');
 })->name('add_company');
@@ -26,9 +26,13 @@ Route::get('/add_employee', function () {
 })->name('add_employee');
 // db inserts
 Route::post('/addNewCompany','CompanyController@store');
+Route::post('/editCompany','CompanyController@edit');
+
 Route::post('/addNewEmployee','EmployeeController@store');
 Route::post('/addInspection','InspectionController@store');
 
 
-//db retrieve 
+//db retrieve  
 Route::get('/getEmployees/{id}', 'EmployeeController@getEmployees');
+Route::get('/view_company','CompanyController@show')->name('view_company');
+Route::get('/view_employee','EmployeeController@show')->name('view_employee');

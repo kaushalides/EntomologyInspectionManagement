@@ -56,6 +56,19 @@ var res = lastVisit.concat(emp_name, datevisited,ins_date);
     <form class="form-horizontal"  method="post" action="{{url('/addInspection')}}">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+  
+<div class="col-sm-2">
+<label for="com" style="text-align: right" class="control-label">Company Name</label>
+</div>
+<div class="col-sm-4">
+    <select class="form-control dynamic" data-dependent="company" id="company" name='company'>
+            @foreach($company as $company)
+            <option value="{{ $company->company_id }}">{{ $company->company_name }}</option>
+              @endforeach
+
+          </select>
+          <div class="emperr">   </div>
+    </div>
     <div class="form-group" style="text-align:right">
     <div class="col-sm-2">
     <label for="emp" style="text-align: left" class="control-label">Employee Name</label>
@@ -69,18 +82,6 @@ var res = lastVisit.concat(emp_name, datevisited,ins_date);
 
           </select>
 </div>
-<div class="col-sm-2">
-<label for="com" style="text-align: right" class="control-label">Company Name</label>
-</div>
-<div class="col-sm-4">
-    <select class="form-control dynamic" data-dependent="company" id="company" name='company'>
-            @foreach($company as $company)
-            <option value="{{ $company->company_id }}">{{ $company->company_name }}</option>
-              @endforeach
-
-          </select>
-          <div class="emperr">   </div>
-    </div>
 </div>
 <div class="form-group" style="text-align:right"> <!-- Date input -->
 <div class="col-sm-2">

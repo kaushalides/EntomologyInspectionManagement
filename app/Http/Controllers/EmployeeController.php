@@ -38,7 +38,9 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         DB::table('employees')->insert(
-            ['emp_name' => $request->emp_name, 'emp_designation' => $request->emp_des,
+            ['emp_name' => $request->emp_name, 
+            'emp_designation' => $request->emp_des,
+            'emp_address' => $request->emp_address,
             'emp_email' => $request->emp_email, 'emp_phone' => $request->emp_contact]
         );
         
@@ -51,9 +53,13 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $employees = DB::table('employees')
+        ->orderBy('emp_name', 'asc')
+        ->get();
+        return view('view_employee',compact(['employees', 'employees'])
+ );
     }
 
     /**
